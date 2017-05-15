@@ -11,7 +11,9 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <scala.version>2.11</scala.version>
-        <akka.version>2.4.17</akka.version>
+        <!--activator-1.2.7 使用的2.4.11-->
+        <akka.version>2.4.11</akka.version>
+        <!--<akka.version>2.3.16</akka.version>-->
     </properties>
 
     <dependencies>
@@ -20,6 +22,12 @@
             <artifactId>akka-actor_${scala.version}</artifactId>
             <version>${akka.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-remote_${scala.version}</artifactId>
+            <version>${akka.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -33,8 +41,8 @@
     </dependencies>
 
     <build>
-        <sourceDirectory>src/main/scala</sourceDirectory>
-        <testSourceDirectory>src/test/scala</testSourceDirectory>
+        <sourceDirectory>src/main/java</sourceDirectory>
+        <!--<testSourceDirectory>src/test/scala</testSourceDirectory>-->
 
         <plugins>
             <plugin>
